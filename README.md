@@ -13,10 +13,10 @@
 
 ##### __thirdly__ write a new test suite named `Initial Entries`
 * Write a test that ensures when the loadFeed function is called and completes its work, there is at least a single .entry element within the .feed container.
-    * first I write beforeEach function for loadFeed to make sure its called first because its asynchronous
-    *second write test expect loadFeed to have been called
+   * first I write beforeEach function for loadFeed to make sure its called first because its asynchronous
+   *second write test expect loadFeed to have been called
 
 ##### __Fourthly__ Write a new test suite named `New Feed Selection`
 * Write a test that ensures when a new feed is loaded by the loadFeed function that the content actually changes.
-    * first I write beforeEach function for loadFeed to make sure its called first because its asynchronous
-    *second write test expect allFeeds not to equal loadFeed
+   * first I write beforeEach function for loadFeed to make sure its called first because its asynchronous
+   *second write test expect allFeeds not to equal loadFeed
