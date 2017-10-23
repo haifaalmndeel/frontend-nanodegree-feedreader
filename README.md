@@ -9,11 +9,11 @@
   * I write a a test expect menuIcon to equal false because in the code menuIcon    should retune fulse bu default.
 
 * Write a test that ensures the menu changes visibility when the menu icon is clicked. This test should have two expectations: does the menu display when clicked and does it hide when clicked again.
-    * I write a a test expect menuIcon to have been called after you ckick on the menu 
+    * I write a a test expect menuIcon to have been called after you cLick on the menu 
 
 ##### __thirdly__ write a new test suite named `Initial Entries`
 * Write a test that ensures when the loadFeed function is called and completes its work, there is at least a single .entry element within the .feed container.
-    * first I write beforeEach function for loadFeed to make sure its called first because its asynchronous
+    * first I write beforeEach function for loadFeed to make sure its called first because its asynchronouS
     *second write test expect loadFeed to have been called
 
 ##### __Fourthly__ Write a new test suite named `New Feed Selection`
