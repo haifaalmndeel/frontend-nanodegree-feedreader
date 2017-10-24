@@ -1,6 +1,9 @@
 
 # frontend nanodegree feedreader
 
+### how to open the page:
+open index.html in your browser
+
 #####  __First__ thing to do is that I have to Write a test that loops through each feed in the allFeeds object and ensures it has a URL defined and that the URL is not empty. 
 * I write a loop for` URL defined` and `name defined` to check if it defined and not empty 
 
