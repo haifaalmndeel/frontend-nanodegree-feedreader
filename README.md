@@ -21,5 +21,8 @@ open index.html in your browser
 
 ##### __Fourthly__ Write a new test suite named `New Feed Selection`
 * Write a test that ensures when a new feed is loaded by the loadFeed function that the content actually changes.
-   * first I write beforeEach function for loadFeed to make sure its called first because its asynchronous
-   * second write test expect allFeeds not to equal loadFeed
+   * first I set two varable oldLoadFeed and newLoadFeed;
+   * I write `beforeEach` function for loadFeed.
+   * Call loadFeed() twice in the `beforeEach` function.
+   * For each loadFeed callback, wait until the asynchronous callback finishes, then retrieve feed content.
+   * Then compare the two feed contents (oldLoadFeed and newLoadFeed) with an expectation to make sure the feed content in the DOM has been updated.
