@@ -97,7 +97,7 @@ $(function() {
 
 
     it('loadFeed call', function() {
-      expect($(".feed .entry").length).toBeGreaterThan(1);
+      expect($(".feed .entry").length).toBeGreaterThan(01);
     });
   });
 
@@ -107,17 +107,23 @@ $(function() {
      * by the loadFeed function that the content actually changes.
      * Remember, loadFeed() is asynchronous.
      */
+    var oldLoadFeed;
+    var newLoadFeed;
+
     beforeEach(function(done) {
-      loadFeed(1, function() {
-        done();
+      loadFeed(0, function() {
+        oldLoadFeed = document.querySelector(".feed").innerHTML;
+
+        loadFeed(1, function() {
+          newLoadFeed = document.querySelector(".feed").innerHTML;
+          done();
+        });
       });
     });
 
     it('loadFeed change', function(done) {
-        setTimeout(function() {
-        done();
-      });
-      expect(allFeeds).not.toEqual(loadFeed);
+      expect(oldLoadFeed).not.toBe(newLoadFeed);
+      done();
     });
   });
 
