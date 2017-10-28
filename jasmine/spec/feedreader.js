@@ -60,7 +60,7 @@ $(function() {
      * hiding/showing of the menu element.
      */
     it('hidden menu', function() {
-      expect($('body').hasClass('menu-hidden')).toEqual(true);
+      expect($('body').hasClass('menu-hidden')).toBeTruthy();
     });
 
     /* Write a test that ensures the menu changes
@@ -71,9 +71,9 @@ $(function() {
 
     it('menu click', function() {
       $(".menu-icon-link").trigger("click");
-      expect($('body').hasClass('menu-hidden')).toEqual(false);
+      expect($('body').hasClass('menu-hidden')).toBeFalsy();
       $(".menu-icon-link").trigger("click");
-      expect($('body').hasClass('menu-hidden')).toEqual(true);
+      expect($('body').hasClass('menu-hidden')).toBeTruthy();
 
     });
 
