@@ -31,22 +31,22 @@ $(function() {
      * and that the URL is not empty.
      */
     it('URL defined', function() {
-      for (var i = 0; i < allFeeds.length; i++) {
-        expect(allFeeds[i].url).toBeDefined();
-        expect(allFeeds[i].url.length).not.toBe(0);
+      allFeeds.forEach(function(feed) {
+        expect(feed.url).toBeDefined();
+        expect(feed.url.length).not.toBe(0);
 
-      }
+      });
     });
     /* Write a test that loops through each feed
      * in the allFeeds object and ensures it has a name defined
      * and that the name is not empty.
      */
     it('name defined', function() {
-      for (var i = 0; i < allFeeds.length; i++) {
-        expect(allFeeds[i].name).toBeDefined();
-        expect(allFeeds[i].name.length).not.toBe(0);
+      allFeeds.forEach(function(feed) {
+        expect(feed.name).toBeDefined();
+        expect(feed.name.length).not.toBe(0);
 
-      }
+      });
     });
   });
 
@@ -70,9 +70,9 @@ $(function() {
      */
 
     it('menu click', function() {
-      $(".menu-icon-link").trigger("click");
+      $('.menu-icon-link').click();
       expect($('body').hasClass('menu-hidden')).toBeFalsy();
-      $(".menu-icon-link").trigger("click");
+      $('.menu-icon-link').click();
       expect($('body').hasClass('menu-hidden')).toBeTruthy();
 
     });
@@ -97,7 +97,7 @@ $(function() {
 
 
     it('loadFeed call', function() {
-      expect($(".feed .entry").length).toBeGreaterThan(01);
+      expect($(".feed .entry").length).toBeGreaterThan(0);
     });
   });
 
